@@ -44,5 +44,6 @@ const addBreedElement = (breedName) => {
   const breedList = document.querySelector('#dog-breeds')
   const breedEl = document.createElement('li');
   breedEl.textContent = breedName;
+  breedEl.addEventListener('click', () => breedEl.style.color = 'red')
   breedList.appendChild(breedEl)
 }
