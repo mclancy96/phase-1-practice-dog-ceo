@@ -1,5 +1,9 @@
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
 document.addEventListener('DOMContentLoaded', () => {
+  addDogs()
+})
+
+const addDogs = () => {
   const dogContainer = document.querySelector('#dog-image-container')
   fetch(imgUrl)
     .then(response => response.json())
@@ -12,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
     .catch(error => console.error('Error fetching dog images:', error));
-})
+
+}
